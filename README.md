@@ -58,9 +58,11 @@ There are just four functions to interface with the sensor:
 
 #### int init()
 Use this to initialize the sensor. It will return 0 if everything went fine, and a non-zero value otherwise. Success when calling init() means that the sensor is connected correctly, and responds to SDPXXX I2C commands.
+
+##### Usage
 ```c++
 int ret = sdp.init();
-if (!ret) {
+if (ret == 0) {
     Serial.print("init(): success\n");
 } else {
     Serial.print("init(): failed, ret = ");
@@ -68,11 +70,31 @@ if (!ret) {
 }
 ```
 
-### int readSample()
+#### int readSample()
 Use this to read a new data sample - differential pressure and temperature - from the sensor. It will return 0 on success, and a non-zero value otherwise.
 
-### float getDifferentialPressure()
+##### Usage
+```c++
+int ret = sdp.readSample();
+if (ret == 0) {
+   // Success; go on to read out differential pressure and temperature
+} else {
+    Serial.print("Error in readSample(), ret = ");
+    Serial.println(ret);
+}
+```
+#### float getDifferentialPressure()
 Use this to read the differential pressure value in Pascal (Pa) read from the sensor in the last `readSample()` call. Note that `readSample()` must be called before calling `getDifferentialPressure()`, otherwise the the value will be outdated at best, and invalid at worst.
 
-### float getTemperature()
+##### Usage
+```c++
+float dp = sdp.getDifferentialPressure();
+```
+
+#### float getTemperature()
 Use this to read the temperature in degrees celcius value read from the sensor in the last `readSample()` call. Note that `readSample()` must be called before calling `getTemperature()`, otherwise the the value will be outdated at best, and invalid at worst.
+
+##### Usage
+```c++
+float temp = sdp.getTemperature();
+```
