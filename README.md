@@ -5,14 +5,17 @@ and 125Pa sensor types are supported.
 
 ## Installation
 
-1. Download the latest ZIP version from the [github releases page](https://github.com/winkj/arduino-sdp/releases). 
+1. Download the latest ZIP version from the [github releases page](https://github.com/winkj/arduino-sdp/releases).
 2. Open Arduino IDE, and select `Sketch > Include Library > Add .ZIP Library`, and select the ZIP file you downloaded in step 2
-3. Try out the example from `File > Examples > arduino-sdp > sdp_generic` (replace `arduino-sdp` with `arduino-sdp-<version>` if necessary)
+3. Try out one of the examples from `File > Examples > arduino-sdp` (replace `arduino-sdp` with `arduino-sdp-<version>` if necessary)
 
 ## Getting started
 
-To get started, have a look at the `sdp_generic` example from the "Examples" menu.
-Follow the steps below to initialize for your sensor:
+To get started, have a look at the examples from `File > Examples > arduino-sdp` (replace `arduino-sdp` with `arduino-sdp-<version>` if necessary):
+
+- For SDP3x on its default I2C address 0x21, use example `sdp3x_default_address`
+- For SDP3x on I2C address 0x22 or 0x23, use example  `sdp3x_manual_address`
+- For the SDP8xx series, use example `sdp8xx`
 
 ### Initializing for SDP3x on I2C address 0x21
 
