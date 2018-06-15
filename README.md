@@ -3,6 +3,12 @@
 This is an unofficial library for Sensirion SDP3x and SDP8xx sensors. Both 500Pa
 and 125Pa sensor types are supported.
 
+## Installation
+
+1. Download the latest ZIP version from the [github releases page](https://github.com/winkj/arduino-sdp/releases). 
+2. Open Arduino IDE, and select `Sketch > Include Library > Add .ZIP Library`, and select the ZIP file you downloaded in step 2
+3. Try out the example from `File > Examples > arduino-sdp > sdp_generic` (replace `arduino-sdp` with `arduino-sdp-<version>` if necessary)
+
 ## Getting started
 
 To get started, have a look at the `sdp_generic` example from the "Examples" menu.
