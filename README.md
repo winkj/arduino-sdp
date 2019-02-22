@@ -1,3 +1,5 @@
+# This repository is deprecated; the latest version can be found at https://github.com/sensirion/arduino-sdp
+
 # Arduino library for Sensirion SDP3x and SDP8xx series
 
 This is an unofficial library for Sensirion SDP3x and SDP8xx sensors. Both 500Pa
